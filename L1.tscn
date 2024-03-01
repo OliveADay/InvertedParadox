@@ -1,3 +1,22 @@
-[gd_scene format=3 uid="uid://dxal3i478h4gh"]
+[gd_scene load_steps=4 format=3 uid="uid://dxal3i478h4gh"]
+
+[ext_resource type="Texture2D" uid="uid://c7bjxu80n8ts5" path="res://tilemap_placeholder.png" id="1_x7dy6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f48ry"]
+texture = ExtResource("1_x7dy6")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="TileSet" id="TileSet_nbany"]
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 129
+sources/0 = SubResource("TileSetAtlasSource_f48ry")
 
 [node name="L1" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_nbany")
+format = 2
+layer_0/tile_data = PackedInt32Array(29, 0, 0, 1114141, 0, 0, 1114112, 0, 0, 1114113, 0, 0, 1114114, 0, 0, 1114115, 0, 0, 1114116, 0, 0, 1114117, 0, 0, 1114118, 0, 0, 1114119, 0, 0, 1114120, 0, 0, 1114121, 0, 0, 1114122, 0, 0, 1114123, 0, 0, 1114124, 0, 0, 1114125, 0, 0, 1114126, 0, 0, 1114127, 0, 0, 1114128, 0, 0, 1114129, 0, 0, 1114130, 0, 0, 1114131, 0, 0, 1114132, 0, 0, 1114133, 0, 0, 1114134, 0, 0, 1114135, 0, 0, 1114136, 0, 0, 1114137, 0, 0, 1114138, 0, 0, 1114139, 0, 0, 1114140, 0, 0)

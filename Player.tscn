@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://blk2nkrvb0m0d"]
+
+[ext_resource type="Texture2D" uid="uid://dghnif8kc8ivd" path="res://Player-Sheet.png" id="1_vjk5p"]
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(9, 9)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_vjk5p")
+vframes = 2
