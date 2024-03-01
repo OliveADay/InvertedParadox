@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://blk2nkrvb0m0d"]
+[gd_scene load_steps=3 format=3 uid="uid://blk2nkrvb0m0d"]
 
 [ext_resource type="Texture2D" uid="uid://dghnif8kc8ivd" path="res://Player-Sheet.png" id="1_vjk5p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5blgj"]
+size = Vector2(13, 13)
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(9, 9)
@@ -10,3 +13,7 @@ metadata/_edit_group_ = true
 texture_filter = 1
 texture = ExtResource("1_vjk5p")
 vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 0.5)
+shape = SubResource("RectangleShape2D_5blgj")
