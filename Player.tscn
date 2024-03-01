@@ -18,6 +18,3 @@ vframes = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.5, 0.5)
 shape = SubResource("RectangleShape2D_5blgj")
-
-[node name="CoyoteTime" type="Timer" parent="."]
-wait_time = 0.2
