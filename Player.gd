@@ -20,9 +20,13 @@ func _physics_process(delta):
 			
 	if Input.is_action_just_pressed("shift_up"):
 		gravM = false
+		$Sprite2D.frame = 1
+		$Sprite2D.scale.y = -1
 		velocity.y  = 0
 	if Input.is_action_just_pressed("shift_down"):
 		gravM = true
+		$Sprite2D.scale.y = 1
+		$Sprite2D.frame = 0
 		velocity.y = 0
 	
 	# Handle jump.
