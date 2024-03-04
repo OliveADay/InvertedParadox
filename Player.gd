@@ -6,24 +6,29 @@ const JUMP_VELOCITY = -300.0
 
 var gravM = true
 
+var jumpTrue = true
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 func _physics_process(delta):
 	# Add the gravity.
+	if($GravJumpActiv.has_overlapping_bodies()):
+		jumpTrue = false
+	
 	if not is_on_floor():
 		if gravM:
 			velocity.y += gravity * delta
 		else:
 			velocity.y -= gravity * delta
 			
-	if Input.is_action_just_pressed("shift_up"):
+	if Input.is_action_just_pressed("shift_up") and not jumpTrue:
 		gravM = false
 		$Sprite2D.frame = 1
 		$Sprite2D.scale.y = -1
 		velocity.y  = 0
-	if Input.is_action_just_pressed("shift_down"):
+	if Input.is_action_just_pressed("shift_down") and not jumpTrue:
 		gravM = true
 		$Sprite2D.scale.y = 1
 		$Sprite2D.frame = 0
