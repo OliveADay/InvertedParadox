@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dxal3i478h4gh"]
+[gd_scene load_steps=6 format=3 uid="uid://dxal3i478h4gh"]
 
 [ext_resource type="Texture2D" uid="uid://c7bjxu80n8ts5" path="res://tilemap_placeholder.png" id="1_x7dy6"]
 [ext_resource type="PackedScene" uid="uid://blk2nkrvb0m0d" path="res://Player.tscn" id="2_lgyva"]
+[ext_resource type="PackedScene" uid="uid://4gcexk25tvak" path="res://GravityShifter.tscn" id="3_7vnss"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f48ry"]
 texture = ExtResource("1_x7dy6")
@@ -12,7 +13,7 @@ texture = ExtResource("1_x7dy6")
 
 [sub_resource type="TileSet" id="TileSet_nbany"]
 physics_layer_0/collision_layer = 1
-physics_layer_0/collision_mask = 129
+physics_layer_0/collision_mask = 131
 sources/0 = SubResource("TileSetAtlasSource_f48ry")
 
 [node name="L1" type="Node2D"]
@@ -24,3 +25,6 @@ layer_0/tile_data = PackedInt32Array(29, 0, 0, 1114141, 0, 0, 1114112, 0, 0, 111
 
 [node name="Player" parent="." instance=ExtResource("2_lgyva")]
 position = Vector2(143, 148)
+
+[node name="GravityShifter" parent="." instance=ExtResource("3_7vnss")]
+position = Vector2(250, 249)
