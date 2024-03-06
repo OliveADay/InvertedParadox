@@ -16,6 +16,8 @@ func _physics_process(delta):
 	# Add the gravity.
 	if($GravJumpActiv.has_overlapping_bodies()):
 		jumpTrue = false
+		var bodies = $GravJumpActiv.get_overlapping_bodies()
+		bodies[0].queue_free()
 	
 	if not is_on_floor():
 		if gravM:
