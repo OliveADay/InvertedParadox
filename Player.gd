@@ -14,10 +14,13 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _physics_process(delta):
 	# Add the gravity.
-	if($GravJumpActiv.has_overlapping_bodies()):
+	if $GravJumpActiv.has_overlapping_bodies():
 		jumpTrue = false
 		var bodies = $GravJumpActiv.get_overlapping_bodies()
 		bodies[0].queue_free()
+		
+	if $SpikeSense.has_overlapping_bodies():
+		get_tree().reload_current_scene()
 	
 	if not is_on_floor():
 		if gravM:
