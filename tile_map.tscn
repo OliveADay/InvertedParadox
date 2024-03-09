@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1iv2jwgvpwnk"]
+[gd_scene load_steps=4 format=3 uid="uid://cip4jtjfkblpw"]
 
 [ext_resource type="Texture2D" uid="uid://c7bjxu80n8ts5" path="res://tilemap_placeholder.png" id="1_jhu0q"]
 
@@ -16,6 +16,21 @@ texture = ExtResource("1_jhu0q")
 1:0/0/physics_layer_1/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_1/angular_velocity = 0.0
 1:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(1.625, 8, 1.625, 3, -2.375, 3.625, -2.875, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_1/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_1/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_1/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_nbany"]
 physics_layer_0/collision_layer = 1
