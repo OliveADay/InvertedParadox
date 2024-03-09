@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c827aphdojmgx"]
+[gd_scene load_steps=3 format=3 uid="uid://36jd66bx4wrw"]
 
-[ext_resource type="PackedScene" uid="uid://b1iv2jwgvpwnk" path="res://tile_map.tscn" id="1_1bdr1"]
+[ext_resource type="PackedScene" path="res://tile_map.tscn" id="1_1bdr1"]
 [ext_resource type="PackedScene" uid="uid://blk2nkrvb0m0d" path="res://Player.tscn" id="2_u8p0o"]
 
 [node name="L2" type="Node2D"]
