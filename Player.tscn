@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://blk2nkrvb0m0d"]
+[gd_scene load_steps=7 format=3 uid="uid://blk2nkrvb0m0d"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_pa51q"]
 [ext_resource type="Texture2D" uid="uid://dghnif8kc8ivd" path="res://Player-Sheet.png" id="1_vjk5p"]
+[ext_resource type="FontFile" uid="uid://ckxg04ipswyou" path="res://PIXELIFYSANS-VARIABLEFONT_WGHT.TTF" id="3_8hf62"]
+[ext_resource type="Texture2D" uid="uid://6dm3tbhpfqkt" path="res://gravShifter.png" id="4_fj3ky"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5blgj"]
 size = Vector2(13, 13)
@@ -38,3 +40,38 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeSense"]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_16f2j")
+
+[node name="Control" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
+z_index = 1
+layout_mode = 0
+offset_left = -256.0
+offset_top = -147.0
+offset_right = 258.0
+offset_bottom = 144.0
+
+[node name="Label" type="Label" parent="Control"]
+z_index = 1
+texture_filter = 1
+layout_mode = 0
+offset_left = -258.0
+offset_top = -133.0
+offset_right = 267.0
+offset_bottom = -96.0
+theme_override_fonts/font = ExtResource("3_8hf62")
+theme_override_font_sizes/font_size = 30
+text = "now jumping switches
+your gravity!"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+z_index = 1
+texture_filter = 1
+scale = Vector2(5, 5)
+texture = ExtResource("4_fj3ky")
