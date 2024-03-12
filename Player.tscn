@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://blk2nkrvb0m0d"]
+[gd_scene load_steps=8 format=3 uid="uid://blk2nkrvb0m0d"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_pa51q"]
 [ext_resource type="Texture2D" uid="uid://dghnif8kc8ivd" path="res://Player-Sheet.png" id="1_vjk5p"]
 [ext_resource type="FontFile" uid="uid://ckxg04ipswyou" path="res://PIXELIFYSANS-VARIABLEFONT_WGHT.TTF" id="3_8hf62"]
 [ext_resource type="Texture2D" uid="uid://6dm3tbhpfqkt" path="res://gravShifter.png" id="4_fj3ky"]
+[ext_resource type="Script" path="res://GravJump_Timer.gd" id="5_58or1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5blgj"]
 size = Vector2(13, 13)
@@ -75,3 +76,10 @@ z_index = 1
 texture_filter = 1
 scale = Vector2(5, 5)
 texture = ExtResource("4_fj3ky")
+
+[node name="Timer" type="Timer" parent="Control"]
+wait_time = 2.0
+one_shot = true
+script = ExtResource("5_58or1")
+
+[connection signal="timeout" from="Control/Timer" to="Control/Timer" method="_on_timeout"]
