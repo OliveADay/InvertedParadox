@@ -29,5 +29,6 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_yqi3u")
 
 [node name="LevelTrans" parent="." instance=ExtResource("3_7623x")]
+position = Vector2(487, 143)
 
 [editable path="Player"]
