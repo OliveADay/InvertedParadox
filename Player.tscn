@@ -35,21 +35,14 @@ shape = SubResource("RectangleShape2D_16f2j")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="SpikeSense" type="Area2D" parent="."]
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeSense"]
-position = Vector2(-0.5, 0)
-shape = SubResource("RectangleShape2D_16f2j")
-
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="Camera2D"]
 visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="PanelContainer" type="PanelContainer" parent="Control"]
+[node name="PanelContainer" type="PanelContainer" parent="Camera2D/Control"]
 z_index = 1
 layout_mode = 0
 offset_left = -256.0
@@ -57,7 +50,7 @@ offset_top = -147.0
 offset_right = 258.0
 offset_bottom = 144.0
 
-[node name="Label" type="Label" parent="Control"]
+[node name="Label" type="Label" parent="Camera2D/Control"]
 z_index = 1
 texture_filter = 1
 layout_mode = 0
@@ -71,15 +64,22 @@ text = "now jumping switches
 your gravity!"
 horizontal_alignment = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="Control"]
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/Control"]
 z_index = 1
 texture_filter = 1
 scale = Vector2(5, 5)
 texture = ExtResource("4_fj3ky")
 
-[node name="Timer" type="Timer" parent="Control"]
+[node name="Timer" type="Timer" parent="Camera2D/Control"]
 wait_time = 2.0
 one_shot = true
 script = ExtResource("5_58or1")
 
-[connection signal="timeout" from="Control/Timer" to="Control/Timer" method="_on_timeout"]
+[node name="SpikeSense" type="Area2D" parent="."]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeSense"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_16f2j")
+
+[connection signal="timeout" from="Camera2D/Control/Timer" to="Camera2D/Control/Timer" method="_on_timeout"]

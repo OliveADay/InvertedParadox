@@ -18,8 +18,8 @@ func _physics_process(delta):
 		jumpTrue = false
 		var bodies = $GravJumpActiv.get_overlapping_bodies()
 		bodies[0].queue_free()
-		$Control.visible = true	
-		$Control/Timer.start(2)	
+		$Camera2D/Control.visible = true	
+		#$Control/Timer.start(2)	
 	if $SpikeSense.has_overlapping_bodies():
 		get_tree().reload_current_scene()
 	

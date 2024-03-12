@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://caxkpkjcw8k5b"]
+[gd_scene load_steps=4 format=3 uid="uid://caxkpkjcw8k5b"]
 
 [ext_resource type="PackedScene" uid="uid://cip4jtjfkblpw" path="res://tile_map.tscn" id="1_yxw34"]
 [ext_resource type="PackedScene" uid="uid://blk2nkrvb0m0d" path="res://Player.tscn" id="2_mc2ef"]
 [ext_resource type="PackedScene" uid="uid://4gcexk25tvak" path="res://GravityShifter.tscn" id="3_iwo8b"]
-[ext_resource type="Script" path="res://GravJump_Timer.gd" id="3_js7ln"]
 
 [node name="L4" type="Node2D"]
 
@@ -18,12 +17,7 @@ limit_left = -277
 limit_right = 2295
 limit_bottom = 1442
 
-[node name="Timer" parent="Player/Control" index="3"]
-script = ExtResource("3_js7ln")
-
 [node name="GravityShifter" parent="." instance=ExtResource("3_iwo8b")]
 position = Vector2(2079, 1334)
-
-[connection signal="timeout" from="Player/Control/Timer" to="Player/Control/Timer" method="_on_timeout"]
 
 [editable path="Player"]
