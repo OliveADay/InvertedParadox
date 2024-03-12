@@ -4,7 +4,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -300.0	
 
-var gravM = true
+@export var gravM = true
 
 var jumpTrue = true
 

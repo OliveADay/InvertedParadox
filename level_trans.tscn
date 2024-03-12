@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://LvlTrans.gd" id="1_bh1te"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yqi3u"]
-size = Vector2(20, 32)
+size = Vector2(20, 64)
 
 [node name="LevelTrans" type="Area2D"]
 collision_mask = 128
