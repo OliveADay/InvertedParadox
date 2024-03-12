@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnw4dfl7jkgfm"]
+
+[ext_resource type="Script" path="res://LvlTrans.gd" id="1_bh1te"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqi3u"]
+size = Vector2(20, 32)
+
+[node name="LevelTrans" type="Area2D"]
+collision_mask = 128
+script = ExtResource("1_bh1te")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(478, 144)
+shape = SubResource("RectangleShape2D_yqi3u")
