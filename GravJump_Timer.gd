@@ -11,8 +11,6 @@ func _ready():
 func _process(delta):
 	if get_parent().visible and not pastVisible:
 		start(4)
-		
-		
 	pastVisible = get_parent().visible
 
 

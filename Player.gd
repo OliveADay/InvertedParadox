@@ -5,6 +5,7 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -300.0	
 
 @export var gravM = true
+@export var controler = Control
 
 var jumpTrue = true
 
@@ -18,7 +19,7 @@ func _physics_process(delta):
 		jumpTrue = false
 		var bodies = $GravJumpActiv.get_overlapping_bodies()
 		bodies[0].queue_free()
-		$Camera2D/Control.visible = true	
+		controler.visible = true	
 		#$Control/Timer.start(2)	
 	if $SpikeSense.has_overlapping_bodies():
 		get_tree().reload_current_scene()
