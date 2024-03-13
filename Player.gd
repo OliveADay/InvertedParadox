@@ -25,10 +25,18 @@ func _physics_process(delta):
 		get_tree().reload_current_scene()
 	
 	if not is_on_floor():
+		
 		if gravM:
 			velocity.y += gravity * delta
+			$CPUParticles2D.position.y = 8
 		else:
 			velocity.y -= gravity * delta
+			$CPUParticles2D.position.y = -8
+	if $GroundCheck.has_overlapping_bodies():
+		$CPUParticles2D.visible = true
+	else:
+		$CPUParticles2D.visible = false
+		
 			
 	if Input.is_action_just_pressed("shift_up") and not jumpTrue:
 		gravM = false
@@ -51,11 +59,14 @@ func _physics_process(delta):
 	
 	if direction == 1:
 		$Sprite2D.scale.x = -1
+		$CPUParticles2D.position.x = 5
 	if direction == -1:
 		$Sprite2D.scale.x = 1
+		$CPUParticles2D.position.x = -5
 	if direction:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		#$CPUParticles2D.visible = false
 		
 	move_and_slide()

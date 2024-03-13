@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://rjb133f5rk3b"]
+
+[ext_resource type="FontFile" uid="uid://ckxg04ipswyou" path="res://PIXELIFYSANS-VARIABLEFONT_WGHT.TTF" id="1_fthhi"]
+
+[node name="End" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(12.92, 7.2)
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 24.0
+offset_top = 57.0
+offset_right = 500.0
+offset_bottom = 214.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_fthhi")
+theme_override_font_sizes/font_size = 130
+text = "You win!"
