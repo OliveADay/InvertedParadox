@@ -4,10 +4,10 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -300.0	
 
-@export var gravM = true
+var gravM = true
 @export var controler = Control
 
-var jumpTrue = true
+@export var jumpTrue = true
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
