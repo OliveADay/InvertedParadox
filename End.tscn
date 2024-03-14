@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://rjb133f5rk3b"]
+[gd_scene load_steps=3 format=3 uid="uid://rjb133f5rk3b"]
 
 [ext_resource type="FontFile" uid="uid://ckxg04ipswyou" path="res://PIXELIFYSANS-VARIABLEFONT_WGHT.TTF" id="1_fthhi"]
+[ext_resource type="AudioStream" uid="uid://dy571mfvssrtf" path="res://Win.wav" id="2_falq5"]
 
 [node name="End" type="Node2D"]
 
@@ -30,3 +31,8 @@ grow_horizontal = 2
 theme_override_fonts/font = ExtResource("1_fthhi")
 theme_override_font_sizes/font_size = 130
 text = "You win!"
+
+[node name="Won" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_falq5")
+volume_db = 1.0
+autoplay = true
